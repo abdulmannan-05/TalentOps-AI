@@ -1,12 +1,6 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { GeistSans } from "geist/font/sans";
 import "./globals.css";
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-inter",
-});
 
 export const metadata: Metadata = {
   title: "TalentOps AI — Autonomous Candidate Screening & Hiring Operations Agent",
@@ -26,8 +20,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={inter.variable}>
-      <body className="font-sans bg-white text-slate-900 antialiased">
+    <html lang="en" className={GeistSans.variable}>
+      <body className="font-sans bg-background text-primary antialiased">
         {children}
       </body>
     </html>

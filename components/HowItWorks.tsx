@@ -48,44 +48,48 @@ const steps: Step[] = [
 
 export function HowItWorks() {
   return (
-    <section id="how-it-works" className="py-24 bg-white">
+    <section id="how-it-works" className="py-24 bg-secondary border-t border-accent-gold/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <p className="text-blue-600 text-sm font-semibold uppercase tracking-widest">
+        {/* Label */}
+        <p className="text-accent-gold text-sm font-semibold uppercase tracking-widest">
           How It Works
         </p>
-        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mt-3">
+
+        {/* Heading */}
+        <h2 className="text-3xl md:text-4xl font-bold text-primary mt-3 tracking-tight">
           From Application to Decision — Fully Automated
         </h2>
       </div>
 
+      {/* Step Diagram */}
       <div className="max-w-2xl mx-auto mt-16 px-4">
         {steps.map((step, idx) => {
           const Icon = step.icon;
           return (
             <div key={step.number}>
               <div className="flex items-start gap-6">
-                {/* Number circle */}
-                <div className="shrink-0 bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-sm">
+                {/* Number circle (Aurelian dossier-styled block) */}
+                <div className="shrink-0 bg-primary text-secondary border border-accent-gold/40 rounded-lg w-10 h-10 flex items-center justify-center font-bold text-sm shadow-sm">
                   {step.number}
                 </div>
 
                 {/* Content */}
                 <div className="pb-2">
                   <div className="flex items-center gap-2 mb-1">
-                    <Icon className="text-blue-600" size={18} />
-                    <h3 className="font-semibold text-slate-900">
+                    <Icon className="text-accent-gold" size={18} />
+                    <h3 className="font-semibold text-primary">
                       {step.title}
                     </h3>
                   </div>
-                  <p className="text-slate-500 text-sm leading-relaxed">
+                  <p className="text-slate-600 text-sm leading-[1.6]">
                     {step.description}
                   </p>
                 </div>
               </div>
 
-              {/* Connector line */}
+              {/* Connector line (Delicate gold-accented dashed line) */}
               {idx < steps.length - 1 && (
-                <div className="border-l-2 border-dashed border-blue-200 ml-5 h-12" />
+                <div className="border-l border-dashed border-accent-gold/40 ml-[19px] h-12 my-1" />
               )}
             </div>
           );

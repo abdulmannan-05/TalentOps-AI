@@ -11,37 +11,37 @@ const trustMetrics = [
 
 export function Hero() {
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 relative overflow-hidden bg-white">
+    <section className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 relative overflow-hidden bg-background">
       {/* Subtle background pattern – radial gradient blob */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-100/40 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent-gold/5 rounded-full blur-3xl" />
         <div
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "radial-gradient(circle, #e2e8f0 1px, transparent 1px)",
+              "radial-gradient(circle, #E5E5E5 1px, transparent 1px)",
             backgroundSize: "32px 32px",
-            opacity: 0.4,
+            opacity: 0.5,
           }}
         />
       </div>
 
-      <div className="relative z-10 text-center max-w-4xl mx-auto">
+      <div className="relative z-10 text-center max-w-4xl mx-auto pt-20">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 border border-blue-200 rounded-full px-4 py-1.5 text-sm font-medium mb-8">
-          <span>✦</span>
+        <div className="inline-flex items-center gap-2 bg-secondary text-primary border border-accent-gold/30 rounded-lg px-4 py-1.5 text-sm font-medium mb-8 shadow-sm tracking-wide">
+          <span className="text-accent-gold">✦</span>
           <span>AI-Powered Hiring Operations</span>
         </div>
 
         {/* Title */}
-        <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-slate-900">
+        <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-primary leading-[1.1] md:leading-[1.15]">
           Autonomous Candidate
           <br />
-          <span className="text-blue-600">Screening Agent</span>
+          <span className="text-accent-gold">Screening Agent</span>
         </h1>
 
         {/* Subtitle */}
-        <p className="text-lg md:text-xl text-slate-500 max-w-2xl mx-auto mt-6 leading-relaxed">
+        <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mt-6 leading-[1.6]">
           An AI-powered hiring agent that evaluates candidates, makes
           role-specific hiring decisions, automates communication, and escalates
           uncertain cases to human recruiters — without manual intervention.
@@ -53,7 +53,7 @@ export function Hero() {
             href={SWE_FORM_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 py-3.5 font-semibold shadow-lg hover:shadow-blue-200 hover:scale-105 transition-all duration-200"
+            className="bg-primary hover:bg-primary/90 text-secondary rounded-lg px-8 py-3.5 font-semibold shadow-md hover:shadow-lg hover:scale-105 transition-all duration-200 border border-primary"
           >
             Apply as SWE →
           </a>
@@ -61,7 +61,7 @@ export function Hero() {
             href={BDM_FORM_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-slate-900 hover:bg-slate-800 text-white rounded-full px-8 py-3.5 font-semibold hover:scale-105 transition-all duration-200"
+            className="bg-secondary hover:bg-background text-primary border border-accent-gold rounded-lg px-8 py-3.5 font-semibold hover:scale-105 transition-all duration-200 shadow-sm"
           >
             Apply as BDM →
           </a>
@@ -70,7 +70,7 @@ export function Hero() {
         {/* See how it works link */}
         <a
           href="#how-it-works"
-          className="inline-block mt-6 text-slate-400 text-sm hover:text-blue-600 transition-colors"
+          className="inline-block mt-6 text-slate-400 text-sm hover:text-accent-gold transition-colors font-medium"
         >
           ↓ See How It Works
         </a>
@@ -81,7 +81,7 @@ export function Hero() {
         <svg
           viewBox="0 0 600 120"
           fill="none"
-          className="w-full h-auto opacity-30"
+          className="w-full h-auto opacity-40"
         >
           {Array.from({ length: 15 }).map((_, row) =>
             Array.from({ length: 30 }).map((_, col) => (
@@ -90,9 +90,9 @@ export function Hero() {
                 cx={col * 20 + 10}
                 cy={row * 8 + 4}
                 r="1.5"
-                fill="#2563EB"
+                fill="#D4AF37"
                 opacity={
-                  Math.abs(col - 15) < 10 && Math.abs(row - 7) < 5 ? 0.6 : 0.2
+                  Math.abs(col - 15) < 10 && Math.abs(row - 7) < 5 ? 0.8 : 0.25
                 }
               />
             ))
@@ -101,11 +101,11 @@ export function Hero() {
       </div>
 
       {/* Trust metrics */}
-      <div className="relative z-10 flex flex-wrap items-center justify-center gap-3 mt-12 pb-8">
+      <div className="relative z-10 flex flex-wrap items-center justify-center gap-4 mt-12 pb-8">
         {trustMetrics.map((metric) => (
           <div
             key={metric.text}
-            className="bg-slate-50 border border-slate-200 rounded-full px-4 py-2 text-sm text-slate-600 flex items-center gap-2"
+            className="bg-secondary border border-accent-gold/25 rounded-lg px-4 py-2 text-sm text-primary font-medium flex items-center gap-2 shadow-sm"
           >
             <span>{metric.icon}</span>
             <span>{metric.text}</span>

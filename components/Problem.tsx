@@ -32,34 +32,45 @@ const painPoints: PainPoint[] = [
 
 export function Problem() {
   return (
-    <section id="problem" className="py-24 bg-slate-50">
+    <section id="problem" className="py-24 bg-background border-t border-accent-gold/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <p className="text-blue-600 text-sm font-semibold uppercase tracking-widest">
+        {/* Label */}
+        <p className="text-accent-gold text-sm font-semibold uppercase tracking-widest">
           The Problem
         </p>
-        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mt-3">
+
+        {/* Heading */}
+        <h2 className="text-3xl md:text-4xl font-bold text-primary mt-3 tracking-tight">
           Hiring Is Still Too Manual
         </h2>
-        <p className="text-slate-500 text-lg max-w-2xl mx-auto mt-4 leading-relaxed">
+
+        {/* Subheading */}
+        <p className="text-slate-600 text-lg max-w-2xl mx-auto mt-4 leading-[1.6]">
           Most hiring pipelines depend on human attention at every step. That
           creates bottlenecks, inconsistency, and a poor candidate experience.
         </p>
 
+        {/* Grid Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-16 max-w-4xl mx-auto">
           {painPoints.map((point) => {
             const Icon = point.icon;
             return (
               <div
                 key={point.title}
-                className="bg-white border border-slate-200 rounded-2xl p-8 text-left hover:shadow-md hover:-translate-y-1 transition-all duration-200"
+                className="bg-secondary border border-border rounded-lg p-8 text-left hover:shadow-md hover:-translate-y-1 hover:border-accent-gold/40 transition-all duration-200 relative group"
               >
-                <div className="bg-red-50 rounded-xl p-3 w-fit">
-                  <Icon className="text-red-500" size={24} />
+                {/* Dossier lining element */}
+                <div className="absolute top-0 left-0 w-1.5 h-full bg-accent-gold/20 group-hover:bg-accent-gold transition-colors rounded-l-lg" />
+                
+                <div className="bg-accent-gold/10 rounded-lg p-3 w-fit text-accent-gold">
+                  <Icon size={24} />
                 </div>
-                <h3 className="font-semibold text-slate-900 text-lg mt-4">
+                
+                <h3 className="font-semibold text-primary text-lg mt-4 tracking-tight">
                   {point.title}
                 </h3>
-                <p className="text-slate-500 text-sm mt-2 leading-relaxed">
+                
+                <p className="text-slate-600 text-sm mt-2 leading-[1.6]">
                   {point.body}
                 </p>
               </div>

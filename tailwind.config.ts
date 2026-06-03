@@ -9,20 +9,20 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#FFFFFF",
-        surface: "#F8FAFC",
-        primary: "#0F172A",
-        secondary: "#64748B",
+        background: "#F9F9F9", // Crisp Off-White (Surface / Main)
+        primary: "#1A1A1A", // Obsidian Black (Action / Text / Headings)
         accent: {
-          blue: "#2563EB",
-          "light-blue": "#DBEAFE",
+          gold: "#D4AF37", // Aurelian Gold
+          "gold-light": "rgba(212, 175, 55, 0.15)", // Subtle gold wash
         },
-        border: "#E2E8F0",
+        secondary: "#FFFFFF", // Pure White (Card Surfaces)
+        border: "#E5E5E5", // Neutral delicate border
+        borderGold: "#E5C875", // Subtle gold border
         success: "#16A34A",
         warning: "#D97706",
       },
       fontFamily: {
-        sans: ["var(--font-inter)", ...defaultTheme.fontFamily.sans],
+        sans: ["var(--font-geist-sans)", ...defaultTheme.fontFamily.sans],
       },
     },
   },

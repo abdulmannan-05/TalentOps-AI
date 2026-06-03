@@ -28,21 +28,21 @@ export function Navbar() {
 
   return (
     <nav
-      className={`sticky top-0 z-50 backdrop-blur-md bg-white/80 transition-all duration-300 ${
-        scrolled ? "border-b border-slate-200 shadow-sm" : ""
+      className={`sticky top-0 z-50 backdrop-blur-md bg-secondary/80 transition-all duration-300 ${
+        scrolled ? "border-b border-accent-gold/20 shadow-sm" : ""
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2 shrink-0">
-            <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center border border-accent-gold/30">
               <svg
                 width="18"
                 height="18"
                 viewBox="0 0 18 18"
                 fill="none"
-                className="text-white"
+                className="text-accent-gold"
               >
                 <path
                   d="M9 2L2 6.5V11.5L9 16L16 11.5V6.5L9 2Z"
@@ -55,8 +55,8 @@ export function Navbar() {
                 <circle cx="9" cy="9" r="2.5" fill="currentColor" />
               </svg>
             </div>
-            <span className="font-semibold text-slate-900">
-              TalentOps<span className="text-blue-600"> AI</span>
+            <span className="font-semibold text-primary">
+              TalentOps<span className="text-accent-gold"> AI</span>
             </span>
           </a>
 
@@ -66,7 +66,7 @@ export function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm text-slate-600 hover:text-slate-900 transition-colors font-medium"
+                className="text-sm text-slate-600 hover:text-primary transition-colors font-medium relative py-1 after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[1px] after:bg-accent-gold after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-200"
               >
                 {link.label}
               </a>
@@ -79,7 +79,7 @@ export function Navbar() {
               href={SWE_FORM_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="border border-blue-600 text-blue-600 rounded-full px-4 py-2 text-sm font-medium hover:bg-blue-50 transition-all duration-200 hover:scale-105"
+              className="border border-accent-gold text-primary rounded-lg px-4 py-2 text-sm font-medium hover:bg-accent-gold/10 transition-all duration-200 hover:scale-105"
             >
               Apply — SWE
             </a>
@@ -87,7 +87,7 @@ export function Navbar() {
               href={BDM_FORM_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-blue-600 text-white rounded-full px-4 py-2 text-sm font-medium hover:bg-blue-700 transition-all duration-200 hover:scale-105"
+              className="bg-primary text-secondary rounded-lg px-4 py-2 text-sm font-medium hover:bg-primary/90 transition-all duration-200 hover:scale-105 border border-primary"
             >
               Apply — BDM
             </a>
@@ -95,7 +95,7 @@ export function Navbar() {
 
           {/* Hamburger – mobile */}
           <button
-            className="md:hidden p-2 text-slate-600 hover:text-slate-900"
+            className="md:hidden p-2 text-slate-600 hover:text-primary"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle navigation menu"
           >
@@ -106,25 +106,25 @@ export function Navbar() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden border-t border-slate-200 bg-white/95 backdrop-blur-md">
+        <div className="md:hidden border-t border-accent-gold/10 bg-secondary/95 backdrop-blur-md">
           <div className="px-4 py-4 space-y-3">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={closeMenu}
-                className="block text-sm text-slate-600 hover:text-slate-900 font-medium py-2"
+                className="block text-sm text-slate-600 hover:text-primary font-medium py-2"
               >
                 {link.label}
               </a>
             ))}
-            <div className="flex flex-col gap-2 pt-3 border-t border-slate-100">
+            <div className="flex flex-col gap-2 pt-3 border-t border-accent-gold/10">
               <a
                 href={SWE_FORM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={closeMenu}
-                className="border border-blue-600 text-blue-600 rounded-full px-4 py-2 text-sm font-medium text-center hover:bg-blue-50 transition-all"
+                className="border border-accent-gold text-primary rounded-lg px-4 py-2 text-sm font-medium text-center hover:bg-accent-gold/10 transition-all"
               >
                 Apply — SWE
               </a>
@@ -133,7 +133,7 @@ export function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={closeMenu}
-                className="bg-blue-600 text-white rounded-full px-4 py-2 text-sm font-medium text-center hover:bg-blue-700 transition-all"
+                className="bg-primary text-secondary rounded-lg px-4 py-2 text-sm font-medium text-center hover:bg-primary/90 transition-all border border-primary"
               >
                 Apply — BDM
               </a>
