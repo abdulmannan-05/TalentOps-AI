@@ -26,7 +26,7 @@ export function Hero() {
         />
       </div>
 
-      <div className="relative z-10 text-center max-w-4xl mx-auto pt-20">
+      <div className="relative z-10 text-center max-w-4xl mx-auto pt-4">
         {/* Badge */}
         <div className="inline-flex items-center gap-2 bg-secondary text-primary border border-accent-gold/30 rounded-lg px-4 py-1.5 text-sm font-medium mb-8 shadow-sm tracking-wide">
           <span className="text-accent-gold">✦</span>
