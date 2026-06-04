@@ -1,7 +1,7 @@
 import { CheckCircle, ArrowRight } from "lucide-react";
 
 const aiHandles = [
-  "Strong candidates (score ≥ 70) — fully automated",
+  "Strong candidates (score > 75) — fully automated",
   "Weak candidates (score < 40) — automated rejection",
   "Resume analysis and scoring",
   "Calendar event creation",
@@ -9,7 +9,7 @@ const aiHandles = [
 ];
 
 const humanHandles = [
-  "Borderline candidates (score 40–69)",
+  "Borderline candidates (score 40–75)",
   "Edge cases flagged by the agent",
   "Final interview decisions",
   "Offer stage conversations",

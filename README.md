@@ -79,7 +79,7 @@ Candidate Submits Application
            ▼
      ┌─────┴──────┐
      │            │
-  Score ≥ 70   Score 40–69   Score < 40
+  Score > 75   Score 40–75   Score < 40
   STRONG       AVERAGE       WEAK
      │            │            │
      ▼            ▼            ▼
@@ -103,7 +103,7 @@ Candidate Submits Application
 
 The agent classifies every candidate into one of three outcomes and fires the appropriate action — automatically.
 
-### 🟢 Strong Candidate `Score 70–100`
+### 🟢 Strong Candidate `Score > 75`
 
 | Action | Method |
 |--------|--------|
@@ -112,7 +112,7 @@ The agent classifies every candidate into one of three outcomes and fires the ap
 | Send personalised invitation | Gmail — HTML formatted |
 | Update pipeline status | Master Sheet → `SENT_INTERVIEW` |
 
-### 🟡 Average Candidate `Score 40–69`
+### 🟡 Average Candidate `Score 40–75`
 
 | Action | Method |
 |--------|--------|
@@ -295,13 +295,13 @@ Fetch candidates where:
   processing_status = AI_COMPLETED
   AND communication_status = PENDING
     │
-    ├── STRONG (≥70) ──→ Create Google Calendar event
+    ├── STRONG (>75) ──→ Create Google Calendar event
     │                         (candidate added as attendee)
     │                    Send HTML interview invitation email
     │                    Update: comm_status = SENT_INTERVIEW
     │                            calendar_status = CREATED
     │
-    ├── AVERAGE (40–69) → Send internal alert to hiring manager
+    ├── AVERAGE (40–75) → Send internal alert to hiring manager
     │                         (includes AI summary + score)
     │                    Update: comm_status = SENT_REVIEW
     │                    (no email to candidate at this stage)
@@ -327,11 +327,11 @@ AI Evaluation Complete
     │  Score  │
     └────┬────┘
          │
-    ≥ 70 ─────────────────→ AUTOMATIC ACTION
+    > 75 ─────────────────→ AUTOMATIC ACTION
     (confident strong)        Interview scheduled
                               No human needed
          │
-    40–69 ────────────────→ HUMAN REVIEW
+    40–75 ────────────────→ HUMAN REVIEW
     (borderline)              Hiring manager alerted
                               Human makes the call
          │
@@ -372,7 +372,7 @@ Experience the agent live — submit an application and watch the pipeline proce
 > 3. Scenario 2 downloads your resume and sends it to Gemini for evaluation
 > 4. Scenario 3 routes you to the correct outcome and sends the appropriate email
 >
-> The entire process runs without any human touching your application — unless you score in the 40–69 range, in which case a human recruiter will review your profile.
+> The entire process runs without any human touching your application — unless you score in the 40–75 range, in which case a human recruiter will review your profile.
 
 ---
 

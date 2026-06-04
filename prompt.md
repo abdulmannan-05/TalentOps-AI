@@ -254,7 +254,7 @@ Top accent: a full-width strip at the top of card, bg-green-500, h-1.5,
 rounded-t-2xl
 Badge: "Strong Candidate" — bg-green-50 text-green-700 border-green-200
 Icon: CheckCircle (text-green-500, size 32) 
-Score range shown: "Score 70–100"
+Score range shown: "Score > 75"
 Actions list (with check icons):
   ✓ Schedule interview automatically
   ✓ Create Google Calendar event  
@@ -266,7 +266,7 @@ CARD 2 — AVERAGE CANDIDATE
 Top accent strip: bg-amber-400
 Badge: "Needs Review" — bg-amber-50 text-amber-700 border-amber-200
 Icon: UserCheck (text-amber-500, size 32)
-Score range: "Score 40–69"
+Score range: "Score 40–75"
 Actions:
   → Generate candidate summary
   → Notify hiring manager
@@ -303,7 +303,7 @@ LEFT COLUMN — "AI Handles" list:
 bg-blue-50 border border-blue-100 rounded-2xl p-8
 Title: "Agent Operates Independently"
 Items with blue check icons:
-  ✓ Strong candidates (score ≥ 70) — fully automated
+  ✓ Strong candidates (score > 75) — fully automated
   ✓ Weak candidates (score < 40) — automated rejection
   ✓ Resume analysis and scoring
   ✓ Calendar event creation
@@ -313,7 +313,7 @@ RIGHT COLUMN — "Human Handles" list:
 bg-amber-50 border border-amber-100 rounded-2xl p-8
 Title: "Recruiter Steps In"  
 Items with amber icons:
-  → Borderline candidates (score 40–69)
+  → Borderline candidates (score 40–75)
   → Edge cases flagged by the agent
   → Final interview decisions
   → Offer stage conversations

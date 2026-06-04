@@ -31,7 +31,7 @@ export function DecisionEngine() {
             </div>
             <CheckCircle className="text-green-600 mb-3" size={32} />
             <p className="text-sm text-slate-500 font-medium mb-4">
-              Score 70–100
+              Score &gt; 75
             </p>
             <ul className="space-y-2.5 text-sm text-slate-600">
               <li className="flex items-start gap-2 leading-relaxed">
@@ -57,7 +57,7 @@ export function DecisionEngine() {
             </div>
             <UserCheck className="text-accent-gold mb-3" size={32} />
             <p className="text-sm text-slate-500 font-medium mb-4">
-              Score 40–69
+              Score 40–75
             </p>
             <ul className="space-y-2.5 text-sm text-slate-600">
               <li className="flex items-start gap-2 leading-relaxed">
@@ -83,7 +83,7 @@ export function DecisionEngine() {
             </div>
             <XCircle className="text-slate-500 mb-3" size={32} />
             <p className="text-sm text-slate-500 font-medium mb-4">
-              Score 0–39
+              Score &lt; 40
             </p>
             <ul className="space-y-2.5 text-sm text-slate-600">
               <li className="flex items-start gap-2 leading-relaxed">
